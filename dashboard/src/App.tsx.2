@@ -1,0 +1,86 @@
+      <div className="metrics-grid">
+        <div className="metric-card">
+          <div className="metric-label">Current Balance</div>
+          <div className="metric-value">${metrics.current_balance.toFixed(2)}</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-label">Total PnL</div>
+          <div className={`metric-value ${metrics.total_pnl >= 0 ? 'positive' : 'negative'}`}>
+            {metrics.total_pnl >= 0 ? '+' : ''}${metrics.total_pnl.toFixed(2)}
+          </div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-label">Accuracy</div>
+          <div className="metric-value">{(metrics.accuracy * 100).toFixed(1)}%</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-label">Sharpe Ratio</div>
+          <div className="metric-value">{metrics.sharpe.toFixed(2)}</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-label">Drawdown</div>
+          <div className="metric-value negative">{(metrics.drawdown * 100).toFixed(2)}%</div>
+        </div>
+      </div>
+
+      <div className="content-grid">
+        <div className="panel">
+          <div className="panel-title">Real-Time Trade Feed</div>
+          <div className="trade-log">
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Coin</th>
+                  <th>Type</th>
+                  <th>Lev</th>
+                  <th>PnL %</th>
+                  <th>PnL $</th>
+                  <th>Conf</th>
+                </tr>
+              </thead>
+              <tbody>
+                {trades.slice(0, 20).map((trade, i) => (
+                  <tr key={i}>
+                    <td>{new Date(trade.timestamp).toLocaleTimeString()}</td>
+                    <td>{trade.coin}</td>
+                    <td style={{color: trade.type === 'Long' ? '#3dffaf' : '#ff4d4d'}}>{trade.type}</td>
+                    <td>{trade.leverage}x</td>
+                    <td className={parseFloat(trade.pnl_pct) >= 0 ? 'positive' : 'negative'}>
+                      {(parseFloat(trade.pnl_pct) * 100).toFixed(2)}%
+                    </td>
+                    <td className={parseFloat(trade.pnl_abs) >= 0 ? 'positive' : 'negative'}>
+                      ${parseFloat(trade.pnl_abs).toFixed(2)}
+                    </td>
+                    <td>{parseFloat(trade.z9_confidence).toFixed(2)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="panel">
+          <div className="panel-title">Oracle Diagnostics</div>
+          <div className="metric-label">Z9 Confidence Swarm</div>
+          <div className="confidence-meter">
+            <div className="confidence-fill" style={{width: `${(parseFloat(trades[0]?.z9_confidence || '0') / 2) * 100}%`}}></div>
+            <div className="confidence-text">{(parseFloat(trades[0]?.z9_confidence || '0') * 100).toFixed(1)}%</div>
+          </div>
+          
+          <div style={{marginTop: '40px'}}>
+            <div className="metric-label">Win Ratio</div>
+            <div className="metric-value" style={{fontSize: '20px'}}>{metrics.win_ratio.toFixed(2)}</div>
+          </div>
+
+          <div style={{marginTop: '20px'}}>
+            <div className="metric-label">Total Trades</div>
+            <div className="metric-value" style={{fontSize: '20px'}}>{metrics.total_trades}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;

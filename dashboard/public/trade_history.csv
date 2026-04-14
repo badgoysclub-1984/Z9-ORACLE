@@ -1,0 +1,2 @@
+timestamp,coin,type,leverage,entry_price,exit_price,pnl_abs,pnl_pct,status,z9_confidence
+2026-04-13T21:54:29.067552,BTC,Long,10,60000,61000,50,0.01,Closed,0.9

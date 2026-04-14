@@ -1,0 +1,1330 @@
+2026-04-13 21:55:20,993 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:55:50,895 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:56:20,888 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:56:51,044 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:57:21,047 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:57:51,110 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:58:21,139 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:58:51,160 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:59:21,293 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:59:29,396 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:59:51,169 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 21:59:59,465 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:00:21,144 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:00:29,461 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:00:52,869 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:00:59,493 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:01:21,261 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:01:29,523 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:01:51,242 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:01:59,422 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:02:21,239 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:02:29,500 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:02:32,493 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:02:51,303 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:02:59,587 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:03:02,592 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:03:21,312 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:03:29,589 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:03:32,497 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:03:51,246 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:03:59,509 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:04:02,572 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:04:21,247 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:04:29,520 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:04:32,533 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:04:51,430 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:04:59,669 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:05:02,516 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:05:21,435 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:05:29,700 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:05:32,603 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:05:51,445 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:05:59,709 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:06:02,658 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:06:21,360 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:06:29,610 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:06:32,645 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:06:51,522 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:06:59,741 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:07:02,715 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:07:21,565 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:07:29,986 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:07:32,591 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:07:51,537 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:07:59,821 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:08:02,722 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:08:21,437 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:08:29,709 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:08:32,639 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:08:51,500 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:08:59,835 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:09:02,775 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:09:21,636 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:09:29,818 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:09:32,654 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:09:51,567 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:09:59,738 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:10:03,045 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:10:21,517 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:10:29,788 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:10:32,682 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:10:51,650 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:10:59,787 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:11:02,726 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:11:21,653 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:11:29,819 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:11:32,748 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:11:51,721 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:11:59,878 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:12:02,868 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:12:21,709 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:12:29,863 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:12:32,856 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:12:51,933 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:12:59,905 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:13:02,844 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:13:21,758 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:13:29,930 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:13:32,879 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:13:51,792 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:13:59,961 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:14:02,919 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:14:21,901 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:14:29,978 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-13 22:14:32,797 : ERROR : BYBIT: Failed to parse symbol information: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/exchange.py", line 100, in symbol_mapping
+    data.append(cls.http_sync.read(ep, json=True, headers=headers, uuid=cls.id))
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 57, in read
+    return self.process_response(r, address, json=json, text=text, uuid=uuid)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 47, in process_response
+    r.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000

@@ -18,8 +18,8 @@ if __name__ == '__main__':
     model = SkyrmatronMini()
     optimizer = Z9SwarmOptimizer(model.parameters(), lr=3e-4, pop_size=9)
 
-    data = np.random.randn(50000, 512, 36).astype(np.float32)
-    labels = np.random.randint(0, 9, 50000)
+    data = np.random.randn(10000, 512, 36).astype(np.float32)
+    labels = np.random.randint(0, 9, 10000)
 
     for epoch in range(8):
         for i in range(0, len(data), 64):

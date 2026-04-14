@@ -1,5 +1,4 @@
 import torch
-import torch.quantization as quant
 import sys
 import os
 
@@ -16,10 +15,13 @@ if __name__ == '__main__':
         model.load_state_dict(torch.load(model_path, map_location='cpu'))
         model.eval()
 
-        quantized = quant.quantize_dynamic(model, {torch.nn.Linear}, dtype=torch.qint8)
+        # Export standard FP32 model due to quantization issues on aarch64/Python 3.13
         dummy = torch.randn(1, 512, 36)
-        torch.onnx.export(quantized, dummy, onnx_path,
-                          opset_version=17, dynamic_axes={'input': {0: 'batch'}})
-        print(f'W4 ONNX exported — ready for Pi 500 at {onnx_path}')
+        torch.onnx.export(model, dummy, onnx_path,
+                          opset_version=18, 
+                          input_names=['input'],
+                          output_names=['output'],
+                          dynamic_axes={'input': {0: 'batch'}})
+        print(f'FP32 ONNX exported — ready for Pi 500 at {onnx_path}')
     else:
         print(f'Error: Could not find model at {model_path}')

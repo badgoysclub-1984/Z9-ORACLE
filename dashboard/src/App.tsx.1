@@ -1,0 +1,72 @@
+import React, { useState, useEffect } from 'react';
+import './App.css';
+
+interface Metrics {
+  accuracy: number;
+  sharpe: number;
+  drawdown: number;
+  win_loss_pct: number;
+  win_ratio: number;
+  total_trades: number;
+  total_pnl: number;
+  current_balance: number;
+}
+
+interface Trade {
+  timestamp: string;
+  coin: string;
+  type: string;
+  leverage: string;
+  entry_price: string;
+  exit_price: string;
+  pnl_abs: string;
+  pnl_pct: string;
+  status: string;
+  z9_confidence: string;
+}
+
+const App: React.FC = () => {
+  const [metrics, setMetrics] = useState<Metrics | null>(null);
+  const [trades, setTrades] = useState<Trade[]>([]);
+
+  const fetchData = async () => {
+    try {
+      const metricsRes = await fetch('/real_time_metrics.json');
+      if (metricsRes.ok) {
+        const data = await metricsRes.json();
+        setMetrics(data);
+      }
+
+      const tradesRes = await fetch('/trade_history.csv');
+      if (tradesRes.ok) {
+        const csvText = await tradesRes.text();
+        const rows = csvText.split('\n').filter(r => r.trim() !== '').slice(1).reverse();
+        const parsedTrades: Trade[] = rows.map(row => {
+          const fields = row.split(',');
+          return { 
+            timestamp: fields[0], coin: fields[1], type: fields[2], 
+            leverage: fields[3], entry_price: fields[4], exit_price: fields[5], 
+            pnl_abs: fields[6], pnl_pct: fields[7], status: fields[8], z9_confidence: fields[9] 
+          };
+        });
+        setTrades(parsedTrades);
+      }
+    } catch (e) {
+      console.error("Error fetching data", e);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+    const interval = setInterval(fetchData, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  if (!metrics) return <div className="dashboard-container">Loading Oracle Data...</div>;
+
+  return (
+    <div className="dashboard-container">
+      <header className="header">
+        <div className="logo">Skyrmatron Z9 <span style={{color: '#fff'}}>v12.0</span></div>
+        <div className="status-badge">LIVE SIMULATION ACTIVE</div>
+      </header>

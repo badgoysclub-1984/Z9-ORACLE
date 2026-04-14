@@ -10,6 +10,11 @@ interface Metrics {
   total_trades: number;
   total_pnl: number;
   current_balance: number;
+  live_prices: {
+    'BTC-USD': number;
+    'ETH-USD': number;
+    'SOL-USD': number;
+  };
 }
 
 interface Trade {
@@ -58,7 +63,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     fetchData();
-    const interval = setInterval(fetchData, 2000);
+    const interval = setInterval(fetchData, 1000);
     return () => clearInterval(interval);
   }, []);
 
@@ -70,6 +75,23 @@ const App: React.FC = () => {
         <div className="logo">Skyrmatron Z9 <span style={{color: '#fff'}}>v12.3</span></div>
         <div className="status-badge">LIVE SIMULATION ACTIVE</div>
       </header>
+
+      {/* Live Prices Grid */}
+      <div className="metrics-grid" style={{ marginBottom: '20px' }}>
+        <div className="metric-card" style={{ borderColor: '#f7931a' }}>
+          <div className="metric-label" style={{ color: '#f7931a' }}>BTC/USD (Live)</div>
+          <div className="metric-value">${(metrics.live_prices?.['BTC-USD'] || 0).toFixed(2)}</div>
+        </div>
+        <div className="metric-card" style={{ borderColor: '#627eea' }}>
+          <div className="metric-label" style={{ color: '#627eea' }}>ETH/USD (Live)</div>
+          <div className="metric-value">${(metrics.live_prices?.['ETH-USD'] || 0).toFixed(2)}</div>
+        </div>
+        <div className="metric-card" style={{ borderColor: '#14F195' }}>
+          <div className="metric-label" style={{ color: '#14F195' }}>SOL/USD (Live)</div>
+          <div className="metric-value">${(metrics.live_prices?.['SOL-USD'] || 0).toFixed(2)}</div>
+        </div>
+      </div>
+
       <div className="metrics-grid">
         <div className="metric-card">
           <div className="metric-label">Current Balance</div>
@@ -116,7 +138,7 @@ const App: React.FC = () => {
                   <tr><td colSpan={7} style={{textAlign: 'center', padding: '20px'}}>Waiting for first signal...</td></tr>
                 ) : trades.slice(0, 20).map((trade, i) => (
                   <tr key={i}>
-                    <td>{new Date(trade.timestamp).toLocaleTimeString()}</td>
+                    <td>{trade.timestamp ? new Date(trade.timestamp).toLocaleTimeString() : ''}</td>
                     <td>{trade.coin}</td>
                     <td style={{color: trade.type === 'Long' ? '#3dffaf' : '#ff4d4d'}}>{trade.type}</td>
                     <td>{trade.leverage}x</td>

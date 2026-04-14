@@ -8,19 +8,16 @@ import os
 import csv
 import json
 from datetime import datetime
-import uvloop
 import sys
 from cryptofeed import FeedHandler
 from cryptofeed.defines import TRADES, L2_BOOK
 from cryptofeed.exchanges import Kraken, Gemini
 
-# Set uvloop as the event loop policy
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s | %(levelname)s | %(message)s'
+    format='%(asctime)s | %(levelname)s | %(message)s',
+    handlers=[logging.StreamHandler(sys.stdout)]
 )
 logger = logging.getLogger('Z9Oracle')
 
@@ -42,7 +39,11 @@ class MetricsManager:
         self.trades = []
         self.balance = 1000.0
         self.peak_balance = 1000.0
-        self.metrics = {
+        self.metrics = self._get_default_metrics()
+        self._ensure_logs()
+
+    def _get_default_metrics(self):
+        return {
             'accuracy': 0.0,
             'sharpe': 0.0,
             'drawdown': 0.0,
@@ -51,16 +52,15 @@ class MetricsManager:
             'total_pnl': 0.0,
             'current_balance': 1000.0,
             'win_pct': 0.0,
-            'last_update': datetime.now().isoformat()
+            'last_update': datetime.now().isoformat(),
+            'live_prices': {'BTC-USD': 0, 'ETH-USD': 0, 'SOL-USD': 0}
         }
-        self._ensure_logs()
 
     def _ensure_logs(self):
         if not os.path.exists(LOG_DIR): os.makedirs(LOG_DIR)
-        if not os.path.exists(TRADE_LOG_PATH):
-            with open(TRADE_LOG_PATH, 'w', newline='') as f:
-                writer = csv.writer(f)
-                writer.writerow(['timestamp', 'coin', 'type', 'leverage', 'entry_price', 'exit_price', 'pnl_abs', 'pnl_pct', 'status', 'z9_confidence'])
+        with open(TRADE_LOG_PATH, 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['timestamp', 'coin', 'type', 'leverage', 'entry_price', 'exit_price', 'pnl_abs', 'pnl_pct', 'status', 'z9_confidence'])
         self.save_metrics()
 
     def record_trade(self, coin, trade_type, leverage, entry_price, exit_price, pnl_abs, pnl_pct, confidence):
@@ -78,20 +78,24 @@ class MetricsManager:
         pnls = [float(t[6]) for t in self.trades] if self.trades else []
         win_trades = [p for p in pnls if p > 0]
         loss_trades = [p for p in pnls if p <= 0]
-        self.metrics.update({
-            'total_trades': len(self.trades),
-            'win_pct': (len(win_trades) / len(self.trades)) * 100 if self.trades else 0,
-            'accuracy': len(win_trades) / len(self.trades) if self.trades else 0,
-            'total_pnl': sum(pnls),
-            'current_balance': self.balance,
-            'last_update': datetime.now().isoformat()
-        })
+        
+        self.metrics['total_trades'] = len(self.trades)
+        self.metrics['win_pct'] = (len(win_trades) / len(self.trades)) * 100 if self.trades else 0
+        self.metrics['accuracy'] = len(win_trades) / len(self.trades) if self.trades else 0
+        self.metrics['total_pnl'] = sum(pnls)
+        self.metrics['current_balance'] = self.balance
+        self.metrics['last_update'] = datetime.now().isoformat()
+        
         avg_win = np.mean(win_trades) if win_trades else 0
         avg_loss = abs(np.mean(loss_trades)) if loss_trades else 1e-8
         self.metrics['win_loss_ratio'] = avg_win / avg_loss
+        
         if len(pnls) > 1:
             std = np.std(pnls)
             self.metrics['sharpe'] = (np.mean(pnls) / (std + 1e-8)) * np.sqrt(365 * 24 * 60)
+        else:
+            self.metrics['sharpe'] = 0.0
+            
         drawdown = (self.peak_balance - self.balance) / self.peak_balance if self.peak_balance > 0 else 0
         self.metrics['drawdown'] = drawdown
         self.save_metrics()
@@ -108,8 +112,8 @@ class Z9OracleHFT:
             try:
                 self.session = ort.InferenceSession(onnx_path, providers=['CPUExecutionProvider'])
                 self.has_model = True
-                print("[Z9] ONNX Model loaded.")
-            except Exception as e: print(f"[Z9] ONNX Error: {e}")
+                print("[Z9] ONNX Model loaded.", flush=True)
+            except Exception as e: print(f"[Z9] ONNX Error: {e}", flush=True)
         
         self.metrics_mgr = MetricsManager()
         self.price_buffer = deque(maxlen=512)
@@ -131,15 +135,15 @@ class Z9OracleHFT:
         except: return 1, 0.5
 
     async def trade_callback(self, trade, receipt_timestamp):
-        # [User Provided Pattern]
-        print(f"[{trade.exchange}] Trade {trade.symbol} | {trade.side} {trade.amount} @ {trade.price} | Time: {trade.timestamp}")
+        print(f"[{trade.exchange}] Trade {trade.symbol} | {trade.side} {trade.amount} @ {trade.price} | Time: {trade.timestamp}", flush=True)
         
         coin = str(trade.symbol)
         price = float(trade.price)
         self.latest_prices[coin] = price
+        self.metrics_mgr.metrics['live_prices'] = self.latest_prices
+        
         if coin == 'BTC-USD': self.price_buffer.append(price)
         
-        # Simulation Exit Logic
         for op in self.open_trades[:]:
             if op['coin'] == coin:
                 pnl_pct = (price - op['entry_price']) / op['entry_price'] if op['side'] == 'Long' else (op['entry_price'] - price) / op['entry_price']
@@ -147,9 +151,8 @@ class Z9OracleHFT:
                     pnl_abs = MAX_POSITION_USD * (pnl_pct * op['leverage'])
                     self.metrics_mgr.record_trade(op['coin'], op['side'], op['leverage'], op['entry_price'], price, pnl_abs, pnl_pct * op['leverage'], op['confidence'])
                     self.open_trades.remove(op)
-                    print(f"[SIM] Position Closed: {op['side']} {coin} | PnL: ")
+                    print(f"[SIM] Position Closed: {op['side']} {coin} | PnL: ${pnl_abs:.2f}", flush=True)
 
-        # Signal Entry Logic
         if len(self.price_buffer) == 512 and time.time() - self.last_signal_ts > 10:
             direction, conf = self.z9_predict(self.price_buffer)
             if conf > Z9_CONFIDENCE_THRESHOLD:
@@ -159,38 +162,43 @@ class Z9OracleHFT:
                     side = 'Long' if direction > 0 else 'Short'
                     leverage = int(LEVERAGE_BASE * conf)
                     self.open_trades.append({'coin': target_coin, 'side': side, 'entry_price': target_price, 'leverage': leverage, 'confidence': conf, 'entry_ts': time.time()})
-                    print(f"[Z9-SIGNAL] {side} {target_coin} @ {target_price:.2f} (Conf: {conf:.3f})")
+                    print(f"[Z9-SIGNAL] {side} {target_coin} @ {target_price:.2f} (Conf: {conf:.3f})", flush=True)
                     self.last_signal_ts = time.time()
+                    
+        self.metrics_mgr.save_metrics()
 
     async def book_callback(self, book, receipt_timestamp):
-        # [User Provided Pattern]
         top_bid = next(iter(book.book.bids)) if book.book.bids else None
         top_ask = next(iter(book.book.asks)) if book.book.asks else None
-        # Printing book updates can be very noisy, so we'll log it every 100 updates
-        if not hasattr(self, '_book_count'): self._book_count = 0
-        self._book_count += 1
-        if self._book_count % 100 == 0:
-            print(f"[{book.exchange}] L2 Book {book.symbol} | Top Bid: {top_bid} | Top Ask: {top_ask}")
         
         if top_bid and top_ask:
             self.latest_prices[book.symbol] = (float(top_bid) + float(top_ask)) / 2
+            self.metrics_mgr.metrics['live_prices'] = self.latest_prices
+            if not hasattr(self, '_book_count'): self._book_count = 0
+            self._book_count += 1
+            if self._book_count % 10 == 0:
+                self.metrics_mgr.save_metrics()
 
-async def main():
-    print("Initializing Z9 HFT Oracle Engine...")
+def main():
+    print("Initializing Z9 HFT Oracle Engine...", flush=True)
     oracle = Z9OracleHFT()
+    print("Oracle initialized.", flush=True)
     fh = FeedHandler()
+    print("FeedHandler initialized.", flush=True)
     channels = [TRADES, L2_BOOK]
     callbacks = {TRADES: oracle.trade_callback, L2_BOOK: oracle.book_callback}
     symbols = ['BTC-USD', 'ETH-USD', 'SOL-USD']
     
-    fh.add_feed(Kraken(symbols=symbols, channels=channels, callbacks=callbacks))
-    fh.add_feed(Gemini(symbols=symbols, channels=channels, callbacks=callbacks))
+    print("Adding Kraken...", flush=True)
+    fh.add_feed(Kraken(symbols=['BTC-USD', 'ETH-USD', 'SOL-USD'], channels=channels, callbacks=callbacks))
     
-    print("Connections established. Streaming Kraken and Gemini L2/Trade data...")
-    loop = asyncio.get_running_loop()
-    for feed in fh.feeds: feed.start(loop)
-    while True: await asyncio.sleep(1)
+    print("Connections established. Streaming Kraken L2/Trade data...", flush=True)
+    try:
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        fh.run()
+    except KeyboardInterrupt:
+        print("\nStopping oracle process...", flush=True)
 
 if __name__ == '__main__':
-    try: asyncio.run(main())
-    except KeyboardInterrupt: print("\nStopping oracle process...")
+    main()

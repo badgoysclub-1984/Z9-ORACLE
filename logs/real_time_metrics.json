@@ -1,11 +1,11 @@
 {
-    "accuracy": 0.4444444444444444,
-    "sharpe": -297.8466343532928,
-    "drawdown": 0.09641368003573052,
-    "win_loss_ratio": 0.46491191073557325,
-    "total_trades": 27,
-    "total_pnl": -96.41368003573056,
-    "current_balance": 903.5863199642695,
-    "win_pct": 44.44444444444444,
-    "last_update": "2026-04-14T16:03:54.731925"
+    "accuracy": 0.0,
+    "sharpe": 0.0,
+    "drawdown": 0.0,
+    "win_loss_ratio": 0.0,
+    "total_trades": 0,
+    "total_pnl": 0.0,
+    "current_balance": 1000.0,
+    "win_pct": 0.0,
+    "last_update": "2026-04-14T16:57:40.694493"
 }

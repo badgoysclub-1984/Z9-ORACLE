@@ -31,22 +31,22 @@ const App: React.FC = () => {
 
   const fetchData = async () => {
     try {
-      const metricsRes = await fetch('/real_time_metrics.json');
+      const metricsRes = await fetch('/real_time_metrics.json?' + new Date().getTime());
       if (metricsRes.ok) {
         const data = await metricsRes.json();
         setMetrics(data);
       }
 
-      const tradesRes = await fetch('/trade_history.csv');
+      const tradesRes = await fetch('/trade_history.csv?' + new Date().getTime());
       if (tradesRes.ok) {
         const csvText = await tradesRes.text();
         const rows = csvText.split('\n').filter(r => r.trim() !== '').slice(1).reverse();
         const parsedTrades: Trade[] = rows.map(row => {
           const fields = row.split(',');
           return { 
-            timestamp: fields[0], coin: fields[1], type: fields[2], 
-            leverage: fields[3], entry_price: fields[4], exit_price: fields[5], 
-            pnl_abs: fields[6], pnl_pct: fields[7], status: fields[8], z9_confidence: fields[9] 
+            timestamp: fields[0] || '', coin: fields[1] || '', type: fields[2] || '', 
+            leverage: fields[3] || '0', entry_price: fields[4] || '0', exit_price: fields[5] || '0', 
+            pnl_abs: fields[6] || '0', pnl_pct: fields[7] || '0', status: fields[8] || '', z9_confidence: fields[9] || '0' 
           };
         });
         setTrades(parsedTrades);
@@ -58,7 +58,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     fetchData();
-    const interval = setInterval(fetchData, 1000);
+    const interval = setInterval(fetchData, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -67,31 +67,31 @@ const App: React.FC = () => {
   return (
     <div className="dashboard-container">
       <header className="header">
-        <div className="logo">Skyrmatron Z9 <span style={{color: '#fff'}}>v12.0</span></div>
+        <div className="logo">Skyrmatron Z9 <span style={{color: '#fff'}}>v12.3</span></div>
         <div className="status-badge">LIVE SIMULATION ACTIVE</div>
       </header>
       <div className="metrics-grid">
         <div className="metric-card">
           <div className="metric-label">Current Balance</div>
-          <div className="metric-value">${metrics.current_balance.toFixed(2)}</div>
+          <div className="metric-value">${(metrics.current_balance || 0).toFixed(2)}</div>
         </div>
         <div className="metric-card">
           <div className="metric-label">Total PnL</div>
-          <div className={`metric-value ${metrics.total_pnl >= 0 ? 'positive' : 'negative'}`}>
-            {metrics.total_pnl >= 0 ? '+' : ''}${metrics.total_pnl.toFixed(2)}
+          <div className={`metric-value ${(metrics.total_pnl || 0) >= 0 ? 'positive' : 'negative'}`}>
+            {(metrics.total_pnl || 0) >= 0 ? '+' : ''}${(metrics.total_pnl || 0).toFixed(2)}
           </div>
         </div>
         <div className="metric-card">
           <div className="metric-label">Accuracy</div>
-          <div className="metric-value">{(metrics.accuracy * 100).toFixed(1)}%</div>
+          <div className="metric-value">{((metrics.accuracy || 0) * 100).toFixed(1)}%</div>
         </div>
         <div className="metric-card">
           <div className="metric-label">Sharpe Ratio</div>
-          <div className="metric-value">{metrics.sharpe.toFixed(2)}</div>
+          <div className="metric-value">{(metrics.sharpe || 0).toFixed(2)}</div>
         </div>
         <div className="metric-card">
           <div className="metric-label">Drawdown</div>
-          <div className="metric-value negative">{(metrics.drawdown * 100).toFixed(2)}%</div>
+          <div className="metric-value negative">{((metrics.drawdown || 0) * 100).toFixed(2)}%</div>
         </div>
       </div>
 
@@ -120,13 +120,13 @@ const App: React.FC = () => {
                     <td>{trade.coin}</td>
                     <td style={{color: trade.type === 'Long' ? '#3dffaf' : '#ff4d4d'}}>{trade.type}</td>
                     <td>{trade.leverage}x</td>
-                    <td className={parseFloat(trade.pnl_pct) >= 0 ? 'positive' : 'negative'}>
-                      {(parseFloat(trade.pnl_pct) * 100).toFixed(2)}%
+                    <td className={parseFloat(trade.pnl_pct || '0') >= 0 ? 'positive' : 'negative'}>
+                      {(parseFloat(trade.pnl_pct || '0') * 100).toFixed(2)}%
                     </td>
-                    <td className={parseFloat(trade.pnl_abs) >= 0 ? 'positive' : 'negative'}>
-                      ${parseFloat(trade.pnl_abs).toFixed(2)}
+                    <td className={parseFloat(trade.pnl_abs || '0') >= 0 ? 'positive' : 'negative'}>
+                      ${parseFloat(trade.pnl_abs || '0').toFixed(2)}
                     </td>
-                    <td>{parseFloat(trade.z9_confidence).toFixed(2)}</td>
+                    <td>{parseFloat(trade.z9_confidence || '0').toFixed(2)}</td>
                   </tr>
                 ))}
               </tbody>
@@ -144,12 +144,12 @@ const App: React.FC = () => {
           
           <div style={{marginTop: '40px'}}>
             <div className="metric-label">Win/Loss Ratio</div>
-            <div className="metric-value" style={{fontSize: '20px'}}>{metrics.win_loss_ratio.toFixed(2)}</div>
+            <div className="metric-value" style={{fontSize: '20px'}}>{(metrics.win_loss_ratio || 0).toFixed(2)}</div>
           </div>
 
           <div style={{marginTop: '20px'}}>
             <div className="metric-label">Total Trades</div>
-            <div className="metric-value" style={{fontSize: '20px'}}>{metrics.total_trades}</div>
+            <div className="metric-value" style={{fontSize: '20px'}}>{metrics.total_trades || 0}</div>
           </div>
         </div>
       </div>

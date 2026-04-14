@@ -54,3 +54,39 @@ Traceback (most recent call last):
   File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/requests/models.py", line 1028, in raise_for_status
     raise HTTPError(http_error_msg, response=self)
 requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://api.bybit.com/v5/market/instruments-info?&category=linear&status=Trading&limit=1000
+2026-04-14 16:21:46,424 : WARNING : KRAKEN.ws.2: encountered connection issue no close frame received or sent - reconnecting in 1.0 seconds...
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection_handler.py", line 65, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection_handler.py", line 95, in _handler
+    async for message in connection.read():
+    ...<3 lines>...
+        await handler(message, connection, self.conn.last_message)
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 339, in read
+    async for data in self.conn:
+    ...<2 lines>...
+        yield data
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/websockets/asyncio/connection.py", line 244, in __aiter__
+    yield await self.recv()
+          ^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/websockets/asyncio/connection.py", line 324, in recv
+    raise self.protocol.close_exc from self.recv_exc
+websockets.exceptions.ConnectionClosedError: no close frame received or sent
+2026-04-14 16:42:37,526 : WARNING : GEMINI.ws.3: encountered connection issue no close frame received or sent - reconnecting in 1.0 seconds...
+Traceback (most recent call last):
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection_handler.py", line 65, in _create_connection
+    await self._handler(connection, self.handler)
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection_handler.py", line 95, in _handler
+    async for message in connection.read():
+    ...<3 lines>...
+        await handler(message, connection, self.conn.last_message)
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/cryptofeed/connection.py", line 339, in read
+    async for data in self.conn:
+    ...<2 lines>...
+        yield data
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/websockets/asyncio/connection.py", line 244, in __aiter__
+    yield await self.recv()
+          ^^^^^^^^^^^^^^^^^
+  File "/home/badgoysclub/z9_hft_env/lib/python3.13/site-packages/websockets/asyncio/connection.py", line 324, in recv
+    raise self.protocol.close_exc from self.recv_exc
+websockets.exceptions.ConnectionClosedError: no close frame received or sent

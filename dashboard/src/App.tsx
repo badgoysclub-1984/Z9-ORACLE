@@ -1,182 +1,215 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import { useState, useEffect, useRef, useCallback } from "react";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
+         ResponsiveContainer, ReferenceLine } from "recharts";
 
-interface Metrics {
-  accuracy: number;
-  sharpe: number;
-  drawdown: number;
-  win_loss_ratio: number;
-  win_pct: number;
-  total_trades: number;
-  total_pnl: number;
-  current_balance: number;
-  live_prices: {
-    'BTC-USD': number;
-    'ETH-USD': number;
-    'SOL-USD': number;
-  };
-}
+// ══════════════════════════════════════════════════════════════════════════════
+//  Z9 Oracle v16.5 — HFT Real-Time Build (Simulator Loop Removed)
+// ══════════════════════════════════════════════════════════════════════════════
 
-interface Trade {
-  timestamp: string;
-  coin: string;
-  type: string;
-  leverage: string;
-  entry_price: string;
-  exit_price: string;
-  pnl_abs: string;
-  pnl_pct: string;
-  status: string;
-  z9_confidence: string;
-}
+const SYMS  = ["BTC-USD","ETH-USD","SOL-USD"];
+const CLR: Record<string, string> = {"BTC-USD":"#f7931a","ETH-USD":"#627eea","SOL-USD":"#14F195"};
 
-const App: React.FC = () => {
-  const [metrics, setMetrics] = useState<Metrics | null>(null);
-  const [trades, setTrades] = useState<Trade[]>([]);
+// ══════════════════════════════════════════════════════════════════════════════
+//  FORMATTERS + UI CONSTANTS
+// ══════════════════════════════════════════════════════════════════════════════
+const fP  =(sym: string,p: number)=>!p?"$0.00":sym==="BTC-USD"?`$${p.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}`:sym==="ETH-USD"?`$${p.toFixed(2)}`:`$${p.toFixed(3)}`;
+const fY  =(sym: string,v: number)=>sym==="BTC-USD"?`${(v/1000).toFixed(1)}k`:sym==="ETH-USD"?v.toFixed(0):v.toFixed(2);
+const gc  =(v: number,a="#14F195",b="#ff3366")=>v>=0?a:b;
+const sgn =(v: number,d=2)=>`${v>=0?"+":""}${v.toFixed(d)}`;
+const fTs =(ts: string)=>ts?new Date(ts).toLocaleTimeString():"-";
 
-  const fetchData = async () => {
+const RB: Record<string, any>  ={
+  trend:  {bg:"#081a0a",fg:"#14F195",bdr:"#14F195",icon:"↑",lbl:"TREND"},
+  range:  {bg:"#0d0d1c",fg:"#627eea",bdr:"#627eea",icon:"≈",lbl:"RANGE"},
+  volatile:{bg:"#1a0808",fg:"#ff3366",bdr:"#ff3366",icon:"!",lbl:"VOLAT"},
+  warmup: {bg:"#0d0d14",fg:"#555",   bdr:"#333",   icon:"◌",lbl:"WARMUP"},
+};
+
+const BG="#03030a",CARD="#09090f",BDR="#111224",DIM="#2e2f4a",TXT="#b8b8d0";
+
+export default function Z9OracleDashboard(){
+  const [metrics, setMetrics] = useState<any>(null);
+  const [history, setHistory] = useState<any[]>([]);
+  const [selSym,  setSelSym]  = useState("BTC-USD");
+  const [chartData, setChartData] = useState<Record<string, any[]>>({
+    "BTC-USD": [], "ETH-USD": [], "SOL-USD": []
+  });
+
+  const fetchSync = useCallback(async () => {
     try {
-      const metricsRes = await fetch('/real_time_metrics.json?' + new Date().getTime());
-      if (metricsRes.ok) {
-        const data = await metricsRes.json();
+      const res = await fetch('/real_time_metrics.json?' + Date.now());
+      if (res.ok) {
+        const data = await res.json();
         setMetrics(data);
+        
+        // Update historical chart data from live feed
+        if (data.live_prices) {
+          setChartData(prev => {
+            const next = {...prev};
+            Object.entries(data.live_prices).forEach(([s, p]) => {
+              if (!next[s]) next[s] = [];
+              // Only add if price changed or every 1s
+              const lastP = next[s][next[s].length-1]?.price;
+              if (p !== lastP || next[s].length === 0) {
+                next[s] = [...next[s], {t: Date.now(), price: p as number}].slice(-120);
+              }
+            });
+            return next;
+          });
+        }
       }
-
-      const tradesRes = await fetch('/trade_history.csv?' + new Date().getTime());
-      if (tradesRes.ok) {
-        const csvText = await tradesRes.text();
-        const rows = csvText.split('\n').filter(r => r.trim() !== '').slice(1).reverse();
-        const parsedTrades: Trade[] = rows.map(row => {
-          const fields = row.split(',');
-          return { 
-            timestamp: fields[0] || '', coin: fields[1] || '', type: fields[2] || '', 
-            leverage: fields[3] || '0', entry_price: fields[4] || '0', exit_price: fields[5] || '0', 
-            pnl_abs: fields[6] || '0', pnl_pct: fields[7] || '0', status: fields[8] || '', z9_confidence: fields[9] || '0' 
+      
+      const resLog = await fetch('/trade_history.csv?' + Date.now());
+      if (resLog.ok) {
+        const text = await resLog.text();
+        const rows = text.trim().split('\n').slice(1).reverse();
+        const trades = rows.map(r => {
+          const c = r.split(',');
+          return {
+            ts: c[0], sym: c[1], side: c[2], lev: c[3],
+            entry: parseFloat(c[4]), exit: parseFloat(c[5]),
+            pnlAbs: parseFloat(c[6]), pnlRaw: parseFloat(c[7]),
+            hold: parseFloat(c[9]), why: c[10], regime: c[12]
           };
         });
-        setTrades(parsedTrades);
+        setHistory(trades);
       }
     } catch (e) {
-      console.error("Error fetching data", e);
+      console.warn("Sync error:", e);
     }
-  };
-
-  useEffect(() => {
-    fetchData();
-    const interval = setInterval(fetchData, 1000);
-    return () => clearInterval(interval);
   }, []);
 
-  if (!metrics) return <div className="dashboard-container">Loading Oracle Data...</div>;
+  useEffect(() => {
+    const t = setInterval(fetchSync, 1000);
+    fetchSync();
+    return () => clearInterval(t);
+  }, [fetchSync]);
 
-  return (
-    <div className="dashboard-container">
-      <header className="header">
-        <div className="logo">Skyrmatron Z9 <span style={{color: '#fff'}}>v12.3</span></div>
-        <div className="status-badge">LIVE SIMULATION ACTIVE</div>
-      </header>
+  if(!metrics) return (
+    <div style={{background:BG,color:"#333",height:"100vh",display:"flex",
+      alignItems:"center",justifyContent:"center",fontFamily:"monospace",letterSpacing:4}}>
+      CONNECTING TO Z9 ENGINE...
+    </div>
+  );
 
-      {/* Live Prices Grid */}
-      <div className="metrics-grid" style={{ marginBottom: '20px' }}>
-        <div className="metric-card" style={{ borderColor: '#f7931a' }}>
-          <div className="metric-label" style={{ color: '#f7931a' }}>BTC/USD (Live)</div>
-          <div className="metric-value">${(metrics.live_prices?.['BTC-USD'] || 0).toFixed(2)}</div>
-        </div>
-        <div className="metric-card" style={{ borderColor: '#627eea' }}>
-          <div className="metric-label" style={{ color: '#627eea' }}>ETH/USD (Live)</div>
-          <div className="metric-value">${(metrics.live_prices?.['ETH-USD'] || 0).toFixed(2)}</div>
-        </div>
-        <div className="metric-card" style={{ borderColor: '#14F195' }}>
-          <div className="metric-label" style={{ color: '#14F195' }}>SOL/USD (Live)</div>
-          <div className="metric-value">${(metrics.live_prices?.['SOL-USD'] || 0).toFixed(2)}</div>
-        </div>
-      </div>
+  const card=(ex={})=>({background:CARD,border:`1px solid ${BDR}`,borderRadius:6,padding:"8px 10px",...ex});
+  const lbl={color:DIM,fontSize:9,letterSpacing:1.5,marginBottom:3,textTransform:"uppercase"} as any;
 
-      <div className="metrics-grid">
-        <div className="metric-card">
-          <div className="metric-label">Current Balance</div>
-          <div className="metric-value">${(metrics.current_balance || 0).toFixed(2)}</div>
+  return(
+    <div style={{background:BG,color:TXT,fontFamily:"'Courier New',monospace",
+      fontSize:11,minHeight:"100vh",padding:10,boxSizing:"border-box"}}>
+
+      {/* HEADER */}
+      <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",
+        borderBottom:`1px solid ${BDR}`,paddingBottom:7,marginBottom:8}}>
+        <div>
+          <span style={{fontSize:13,fontWeight:900,letterSpacing:3,color:"#4030aa"}}>SKYRMATRON</span>
+          <span style={{fontSize:13,fontWeight:900,letterSpacing:3,color:"#fff"}}> Z9</span>
+          <span style={{fontSize:8,color:DIM,marginLeft:6}}>v16.5 · HFT REAL-TIME FEED</span>
         </div>
-        <div className="metric-card">
-          <div className="metric-label">Total PnL</div>
-          <div className={`metric-value ${(metrics.total_pnl || 0) >= 0 ? 'positive' : 'negative'}`}>
-            {(metrics.total_pnl || 0) >= 0 ? '+' : ''}${(metrics.total_pnl || 0).toFixed(2)}
+        <div style={{display:"flex",gap:10,alignItems:"center"}}>
+          <div style={{display:"flex", gap:15}}>
+             <span style={{color:DIM, fontSize:9}}>CPU: <span style={{color:"#9080ee"}}>ISOLATED [2,3]</span></span>
+             <span style={{color:DIM, fontSize:9}}>LATENCY: <span style={{color:"#14F195"}}>BUSY_POLL</span></span>
           </div>
-        </div>
-        <div className="metric-card">
-          <div className="metric-label">Accuracy</div>
-          <div className="metric-value">{((metrics.accuracy || 0) * 100).toFixed(1)}%</div>
-        </div>
-        <div className="metric-card">
-          <div className="metric-label">Sharpe Ratio</div>
-          <div className="metric-value">{(metrics.sharpe || 0).toFixed(2)}</div>
-        </div>
-        <div className="metric-card">
-          <div className="metric-label">Drawdown</div>
-          <div className="metric-value negative">{((metrics.drawdown || 0) * 100).toFixed(2)}%</div>
+          <span style={{color:"#14F195",fontSize:9}}>⬤ ENGINE LIVE</span>
+          <span style={{color:DIM,fontSize:9}}>{new Date(metrics.last_update).toLocaleTimeString()}</span>
         </div>
       </div>
 
-      <div className="content-grid">
-        <div className="panel">
-          <div className="panel-title">Real-Time Trade Feed</div>
-          <div className="trade-log">
-            <table>
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th>Coin</th>
-                  <th>Type</th>
-                  <th>Lev</th>
-                  <th>PnL %</th>
-                  <th>PnL $</th>
-                  <th>Conf</th>
+      {/* PRICE GRID + ADAPTIVE LEVERAGE */}
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:6,marginBottom:8}}>
+        {SYMS.map(s=>{
+          const p = metrics.live_prices[s];
+          const sig = metrics.live_signals?.[s] || {};
+          const rb = RB[sig.regime] || RB.warmup;
+          const active = selSym === s;
+          return(
+            <div key={s} onClick={()=>setSelSym(s)} style={{...card(),cursor:"pointer",
+              borderColor:active?CLR[s]:BDR,background:active?"#0c0c1a":CARD}}>
+              <div style={{display:"flex",justifyContent:"space-between",marginBottom:3}}>
+                <span style={{color:CLR[s],fontSize:9,letterSpacing:1.5}}>{s}</span>
+                <span style={{background:rb.bg,color:rb.fg,border:`1px solid ${rb.bdr}`,
+                      padding:"1px 5px",borderRadius:3,fontSize:7}}>{rb.icon} {rb.lbl}</span>
+              </div>
+              <div style={{display:"flex", justifyContent:"space-between", alignItems:"flex-end"}}>
+                <div style={{color:"#fff",fontSize:20,fontWeight:700}}>{fP(s,p)}</div>
+                <div style={{textAlign:"right"}}>
+                   <div style={lbl}>Adaptive Lev</div>
+                   <div style={{color:"#9080ee", fontSize:14, fontWeight:900}}>{sig.lev || "─"}x</div>
+                </div>
+              </div>
+              <div style={{marginTop:4, display:"flex", justifyContent:"space-between", fontSize:8, color:DIM}}>
+                 <span>CONF: <span style={{color:gc(sig.conf - 0.6)}}>{(sig.conf*100).toFixed(1)}%</span></span>
+                 <span>DIR: <span style={{color:sig.dir > 0 ? "#14F195" : sig.dir < 0 ? "#ff3366" : DIM}}>{sig.dir > 0 ? "LONG" : sig.dir < 0 ? "SHORT" : "FLAT"}</span></span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      {/* METRICS ROW */}
+      <div style={{display:"grid",gridTemplateColumns:"repeat(6,1fr)",gap:4,marginBottom:8}}>
+        {[["Balance",`$${metrics.balance.toFixed(2)}`,gc(metrics.balance-1000)],
+          ["Total PnL",sgn(metrics.total_pnl),gc(metrics.total_pnl)],
+          ["Win Rate",`${metrics.win_pct}%`,"#14F195"],
+          ["Sharpe",metrics.sharpe.toFixed(2),"#627eea"],
+          ["Drawdown",`${(metrics.drawdown*100).toFixed(2)}%`,"#ff3366"],
+          ["Trades",metrics.total_trades,TXT],
+        ].map(([l,v,c])=>(
+          <div key={l} style={card({padding:"6px 8px"})}>
+            <div style={lbl}>{l}</div>
+            <div style={{color:c,fontSize:11,fontWeight:700}}>{v}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* CHART SECTION */}
+      <div style={card({marginBottom:8, padding:10})}>
+        <div style={{display:"flex",justifyContent:"space-between",marginBottom:6}}>
+          <span style={{color:CLR[selSym],fontSize:10,fontWeight:700}}>{selSym} HFT REAL-TIME FEED</span>
+          <span style={{color:DIM,fontSize:9}}>LIVE TICK HISTORY</span>
+        </div>
+        <ResponsiveContainer width="100%" height={180}>
+          <LineChart data={chartData[selSym]}>
+            <CartesianGrid strokeDasharray="2 4" stroke="#0c0c14"/>
+            <XAxis dataKey="t" hide/>
+            <YAxis domain={['auto', 'auto']} tick={{fill:DIM,fontSize:8}} tickFormatter={v=>fY(selSym,v)} width={40}/>
+            <Tooltip contentStyle={{background:CARD,border:`1px solid ${BDR}`,fontSize:9}}
+              labelFormatter={()=>""} formatter={(v: any)=>[fP(selSym,v),"Price"]}/>
+            <Line type="monotone" dataKey="price" stroke={CLR[selSym]} dot={false} strokeWidth={2} isAnimationActive={false}/>
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* LOG SECTION */}
+      <div style={card({flex:1})}>
+        <div style={{...lbl,marginBottom:8}}>Trade History (v16.5 Live Audit)</div>
+        <div style={{maxHeight:300,overflowY:"auto"}}>
+          <table style={{width:"100%",borderCollapse:"collapse",fontSize:9}}>
+            <thead>
+              <tr style={{color:DIM,borderBottom:`1px solid ${BDR}`,textAlign:"left"}}>
+                <th>Time</th><th>Coin</th><th>Side</th><th>Lev</th><th>Entry</th><th>Exit</th><th>PnL$</th><th>Why</th><th>Regime</th>
+              </tr>
+            </thead>
+            <tbody>
+              {history.slice(0,50).map((t,i)=>(
+                <tr key={i} style={{borderBottom:`1px solid #090910`,background:i%2===0?"transparent":"#0a0a12"}}>
+                  <td style={{padding:"4px 2px",color:DIM}}>{fTs(t.ts)}</td>
+                  <td style={{color:CLR[t.sym]}}>{t.sym.split("-")[0]}</td>
+                  <td style={{color:t.side==="Long"?"#14F195":"#ff3366"}}>{t.side}</td>
+                  <td style={{color:"#9080ee", fontWeight:900}}>{t.lev}x</td>
+                  <td>{t.entry.toFixed(2)}</td>
+                  <td>{t.exit.toFixed(2)}</td>
+                  <td style={{color:gc(t.pnlAbs),fontWeight:700}}>{sgn(t.pnlAbs)}</td>
+                  <td style={{color:DIM}}>{t.why}</td>
+                  <td style={{color:RB[t.regime]?.fg || DIM}}>{t.regime?.toUpperCase()}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {trades.length === 0 ? (
-                  <tr><td colSpan={7} style={{textAlign: 'center', padding: '20px'}}>Waiting for first signal...</td></tr>
-                ) : trades.slice(0, 20).map((trade, i) => (
-                  <tr key={i}>
-                    <td>{trade.timestamp ? new Date(trade.timestamp).toLocaleTimeString() : ''}</td>
-                    <td>{trade.coin}</td>
-                    <td style={{color: trade.type === 'Long' ? '#3dffaf' : '#ff4d4d'}}>{trade.type}</td>
-                    <td>{trade.leverage}x</td>
-                    <td className={parseFloat(trade.pnl_pct || '0') >= 0 ? 'positive' : 'negative'}>
-                      {(parseFloat(trade.pnl_pct || '0') * 100).toFixed(2)}%
-                    </td>
-                    <td className={parseFloat(trade.pnl_abs || '0') >= 0 ? 'positive' : 'negative'}>
-                      ${parseFloat(trade.pnl_abs || '0').toFixed(2)}
-                    </td>
-                    <td>{parseFloat(trade.z9_confidence || '0').toFixed(2)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div className="panel">
-          <div className="panel-title">Oracle Diagnostics</div>
-          <div className="metric-label">Z9 Confidence Swarm</div>
-          <div className="confidence-meter">
-            <div className="confidence-fill" style={{width: `${(parseFloat(trades[0]?.z9_confidence || '0.5') / 1.0) * 100}%`}}></div>
-            <div className="confidence-text">{(parseFloat(trades[0]?.z9_confidence || '0.5') * 100).toFixed(1)}%</div>
-          </div>
-          
-          <div style={{marginTop: '40px'}}>
-            <div className="metric-label">Win/Loss Ratio</div>
-            <div className="metric-value" style={{fontSize: '20px'}}>{(metrics.win_loss_ratio || 0).toFixed(2)}</div>
-          </div>
-
-          <div style={{marginTop: '20px'}}>
-            <div className="metric-label">Total Trades</div>
-            <div className="metric-value" style={{fontSize: '20px'}}>{metrics.total_trades || 0}</div>
-          </div>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   );
-};
-
-export default App;
+}

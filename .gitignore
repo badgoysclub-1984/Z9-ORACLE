@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.class
+venv/
+.env
+
+# Logs & Data
+logs/*.log
+logs/*.json
+logs/*.csv
+*.log
+feedhandler.log
+
+# Dashboard
+dashboard/node_modules/
+dashboard/build/
+.DS_Store
+
+# Temporary/Audit
+screenshots/audit/
+*.tmp

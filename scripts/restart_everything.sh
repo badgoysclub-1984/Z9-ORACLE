@@ -4,7 +4,7 @@ export WAYLAND_DISPLAY=wayland-0
 export DISPLAY=:0
 
 echo "Killing existing processes..."
-pkill -f z9_hft_oracle_v12
+pkill -f oracle_v14.py
 pkill -f react-scripts
 pkill -f chromium
 pkill -f npm
@@ -24,9 +24,11 @@ touch logs/trade_history.csv
 # Symlink to public directory for npm start
 ln -sf ../../logs/real_time_metrics.json dashboard/public/real_time_metrics.json
 ln -sf ../../logs/trade_history.csv dashboard/public/trade_history.csv
+ln -sf ../../logs/real_time_metrics.json dashboard/build/real_time_metrics.json
+ln -sf ../../logs/trade_history.csv dashboard/build/trade_history.csv
 
 echo "Starting Z9 Oracle engine..."
-nohup venv/bin/python src/z9_hft_oracle_v12.py > logs/oracle_output.log 2>&1 &
+nohup venv/bin/python -u src/oracle_v14.py > logs/oracle_output.log 2>&1 &
 
 echo "Starting React dashboard..."
 cd dashboard

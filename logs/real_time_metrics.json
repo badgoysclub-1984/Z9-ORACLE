@@ -1,16 +1,40 @@
 {
-    "accuracy": 0.0,
-    "sharpe": 0.0,
-    "drawdown": 0.0,
-    "win_loss_ratio": 0.0,
-    "total_trades": 0,
-    "total_pnl": 0.0,
-    "current_balance": 1000.0,
+    "balance": 961.4684,
+    "peak": 1000.0,
+    "total_pnl": -38.5316,
+    "total_trades": 2,
     "win_pct": 0.0,
-    "last_update": "2026-04-14T18:01:16.062506",
+    "accuracy": 0.0,
+    "win_loss_ratio": 0.0,
+    "sharpe": -20946.8696,
+    "drawdown": 0.038532,
+    "avg_hold_s": 217.3,
+    "trades_per_min": 0.0,
     "live_prices": {
-        "BTC-USD": 74204.85,
-        "ETH-USD": 2323.7799999999997,
-        "SOL-USD": 83.725
-    }
+        "BTC-USD": 74662.2807815513,
+        "ETH-USD": 2330.226842317117,
+        "SOL-USD": 87.68537437762403
+    },
+    "live_signals": {
+        "BTC-USD": {
+            "conf": 0.99,
+            "dir": 1,
+            "regime": "trend",
+            "lev": 42
+        },
+        "ETH-USD": {
+            "conf": 0.8865,
+            "dir": 1,
+            "regime": "trend",
+            "lev": 37
+        },
+        "SOL-USD": {
+            "conf": 0.99,
+            "dir": 1,
+            "regime": "trend",
+            "lev": 42
+        }
+    },
+    "last_update": "2026-04-16T22:51:31.760253",
+    "engine": "v16.6"
 }
